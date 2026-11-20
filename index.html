@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panela Fechada — Jantar gostoso pronto em 8 minutos</title>
+  <meta name="description" content="Comida congelada de verdade para o jantar de quem mora sozinho em São Paulo. Experimente sua primeira refeição completa por R$ 19,90 — sem assinatura obrigatória.">
+<style>
+    :root {
+      --bg-cream: #F6F1E9;
+      --bg-surface: #FFFFFF;
+      --bg-soft: #EFE8DC;
+      --brand-aubergine: #4A1942;
+      --brand-aubergine-dark: #35102F;
+      --brand-green: #225831;
+      --brand-green-hover: #1A4426;
+      --brand-amber: #D97706;
+      --text-main: #221B20;
+      --text-muted: #463E43;
+      --border-subtle: #E2D9CB;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --shadow-card: 0 8px 24px rgba(34, 27, 32, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .font-display {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      line-height: 1.18;
+      color: var(--text-main);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(246, 241, 233, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+      gap: 16px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--brand-aubergine);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--brand-aubergine);
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .header-nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: color 0.2s;
+    }
+
+    .header-nav a:hover {
+      color: var(--brand-aubergine);
+    }
+
+        .brand-logo-img {
+      height: 46px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .footer-logo-img {
+      height: 52px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      background: #F6F1E9;
+      padding: 8px 14px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.96rem;
+      padding: 14px 24px;
+      border-radius: 999px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--brand-green);
+      color: #FFFFFF;
+      box-shadow: 0 6px 18px rgba(46, 111, 64, 0.24);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--brand-green-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: #FFFFFF;
+      color: var(--brand-aubergine);
+      border-color: var(--border-subtle);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--brand-aubergine);
+      background-color: var(--bg-soft);
+    }
+
+    .btn-sm {
+      padding: 10px 18px;
+      font-size: 0.88rem;
+    }
+
+    /* Section Spacing & Labels */
+    section {
+      padding: 76px 0;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-aubergine);
+      margin-bottom: 10px;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 48px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.85rem, 3.2vw, 2.55rem);
+      margin-bottom: 14px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.06rem;
+    }
+
+    /* 1. HERO */
+    .hero {
+      padding: 56px 0 76px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--brand-aubergine);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 4.4vw, 3.45rem);
+      margin-bottom: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-sub {
+      font-size: 1.12rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      max-width: 560px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .hero-trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .hero-trust-strip span::before {
+      content: "✓ ";
+      color: var(--brand-green);
+      font-weight: 700;
+    }
+
+    .hero-visual {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--bg-soft);
+      box-shadow: 0 20px 44px rgba(74, 25, 66, 0.14);
+      border: 6px solid #FFFFFF;
+      aspect-ratio: 4 / 3;
+    }
+
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-pill-top {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(34, 27, 32, 0.86);
+      color: #FFFFFF;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .hero-pill-bottom {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background: var(--brand-aubergine);
+      color: #FFFFFF;
+      padding: 10px 16px;
+      border-radius: 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-fallback {
+      display: none;
+      width: 100%;
+      height: 100%;
+      padding: 32px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #4A1942 0%, #2E6F40 100%);
+      color: #FFFFFF;
+    }
+
+    /* 2. BENEFÍCIOS */
+    .benefits-section {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .benefit-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 28px;
+    }
+
+    .benefit-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+      color: var(--brand-aubergine);
+      font-weight: 700;
+    }
+
+    .benefit-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .benefit-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .benefits-note {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* 3. PROVA SOCIAL */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      background: var(--brand-aubergine);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      margin-bottom: 36px;
+      text-align: center;
+    }
+
+    .metric-item strong {
+      display: block;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 1.9rem;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    .metric-item span {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 26px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .testimonial-card p {
+      font-size: 0.96rem;
+      color: var(--text-main);
+      margin-bottom: 18px;
+    }
+
+    .testimonial-author {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 12px;
+    }
+
+    .testimonial-author strong {
+      color: var(--brand-aubergine);
+      display: block;
+    }
+
+    /* 4. COMO FUNCIONA */
+    .steps-section {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .step-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      position: relative;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--brand-aubergine);
+      color: #FFFFFF;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .step-card h3 {
+      font-size: 1.18rem;
+      margin-bottom: 8px;
+    }
+
+    .step-card p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    /* 5. CARDÁPIO */
+    .menu-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .filter-btn {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--brand-aubergine);
+      color: #FFFFFF;
+      border-color: var(--brand-aubergine);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .dish-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-photo-wrap {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background: var(--bg-soft);
+      overflow: hidden;
+    }
+
+    .dish-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .dish-badge-cat {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--brand-aubergine);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 999px;
+    }
+
+    .dish-badge-kcal {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(34, 27, 32, 0.85);
+      color: #FFFFFF;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 8px;
+    }
+
+    .dish-placeholder {
+      display: none;
+      width: 100%;
+      height: 100%;
+      padding: 18px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #EFE8DC 0%, #E2D9CB 100%);
+      color: var(--brand-aubergine);
+      font-size: 0.85rem;
+    }
+
+    .dish-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dish-meta {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--brand-green);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+
+    .dish-body h3 {
+      font-size: 1.12rem;
+      margin-bottom: 8px;
+    }
+
+    .dish-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      flex: 1;
+    }
+
+    .dish-nutrition {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 10px;
+      margin-bottom: 14px;
+      font-size: 0.82rem;
+    }
+
+    .dish-nutrition summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--brand-aubergine);
+      list-style: none;
+    }
+
+    .nutrition-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .nutrition-pills span {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-subtle);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+
+    .dish-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 14px 20px;
+      background: var(--bg-cream);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .qty-control {
+      display: inline-flex;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .qty-control button {
+      width: 30px;
+      height: 30px;
+      border: none;
+      background: transparent;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      color: var(--brand-aubergine);
+    }
+
+    .qty-control span {
+      min-width: 24px;
+      text-align: center;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .selection-bar {
+      margin-top: 32px;
+      background: #FFFFFF;
+      border: 2px solid var(--brand-green);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    /* 6. COMPARATIVO */
+    .compare-section {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .compare-table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    table.compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .compare-table th,
+    .compare-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .compare-table th {
+      background: var(--bg-cream);
+      font-weight: 700;
+    }
+
+    .compare-table .col-highlight {
+      background: rgba(46, 111, 64, 0.08);
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    /* 7. PLANOS E PREÇOS */
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .plan-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: var(--shadow-card);
+    }
+
+    .plan-card.featured {
+      border: 2px solid var(--brand-green);
+      transform: translateY(-4px);
+    }
+
+    .plan-tag {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--brand-green);
+      color: #FFFFFF;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .plan-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+    }
+
+    .plan-price {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--brand-aubergine);
+      margin: 12px 0 4px;
+    }
+
+    .plan-unit {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .plan-list {
+      list-style: none;
+      margin-bottom: 22px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .plan-list li {
+      margin-bottom: 8px;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .plan-list li::before {
+      content: "•";
+      color: var(--brand-green);
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    .club-note {
+      margin-top: 28px;
+      text-align: center;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-subtle);
+      padding: 16px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+    }
+
+    /* 8. FAQ */
+    .faq-section {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .faq-list {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 18px 22px;
+    }
+
+    .faq-item summary {
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 1rem;
+      color: var(--text-main);
+    }
+
+    .faq-item p {
+      margin-top: 10px;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    /* 9. GARANTIA */
+    .guarantee-box {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border: 2px solid var(--brand-aubergine);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+    }
+
+    .guarantee-badge {
+      display: inline-block;
+      background: var(--brand-aubergine);
+      color: #FFFFFF;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    .guarantee-box h2 {
+      font-size: 1.9rem;
+      margin-bottom: 12px;
+    }
+
+    .guarantee-box p {
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* 10. FORMULÁRIO / RESERVA */
+    .booking-section {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .booking-card {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.95rem;
+      background: var(--bg-cream);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: 2px solid var(--brand-green);
+      background: #FFFFFF;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .checkbox-row input {
+      margin-top: 4px;
+    }
+
+    /* 11. CTA FINAL & FOOTER */
+    .final-cta {
+      background: var(--brand-aubergine);
+      color: #FFFFFF;
+      text-align: center;
+      padding: 64px 0;
+    }
+
+    .final-cta h2 {
+      color: #FFFFFF;
+      font-size: clamp(1.85rem, 3vw, 2.4rem);
+      margin-bottom: 12px;
+    }
+
+    .final-cta p {
+      color: rgba(255, 255, 255, 0.84);
+      max-width: 580px;
+      margin: 0 auto 26px;
+    }
+
+    .site-footer {
+      background: var(--brand-aubergine-dark);
+      color: rgba(255, 255, 255, 0.78);
+      padding: 40px 0 28px;
+      font-size: 0.88rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.78);
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .benefits-grid,
+      .metrics-bar,
+      .testimonials-grid,
+      .steps-grid,
+      .menu-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .plans-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .header-nav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .plans-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 54px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#topo" class="brand-logo" aria-label="Panela Fechada — Página inicial">
+        <img
+          src="imagens/logo.png"
+          alt="Panela Fechada — Refeições Congeladas"
+          class="brand-logo-img"
+        >
+      </a>
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a href="#beneficios">Benefícios</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#cardapio">Cardápio (16 pratos)</a>
+        <a href="#planos">Planos</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+      <a href="#reservar" class="btn btn-primary btn-sm">Provar por R$ 19,90</a>
+    </div>
+  </header>
+
+  <main id="topo">
+
+    <!-- 1. HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-badge">Para quem mora sozinho · Entrega em São Paulo (Capital)</span>
+          <h1>Jantar gostoso pronto em 8 minutos</h1>
+          <p class="hero-sub">
+            Sem cozinhar só para si nem esperar delivery. Prove 1 jantar individual congelado por <strong>R$ 19,90</strong>. Reserve no WhatsApp!
+          </p>
+          <div class="hero-actions" style="align-items:center;">
+            <a href="#reservar" class="btn btn-primary" onclick="selectPlan('Experimentação — 1 prato por R$ 19,90')">Provar por R$ 19,90</a>
+            <a href="#cardapio" style="color:var(--brand-aubergine); font-weight:700; text-decoration:underline; padding:10px 8px;">Explorar o cardápio (16 pratos) ↓</a>
+          </div>
+          <div class="hero-trust-strip">
+            <span>Sem assinatura obrigatória</span>
+            <span>Porções individuais (310g a 460g)</span>
+            <span>Reserva direta no WhatsApp</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <span class="hero-pill-top">⏱ Pronto em até 8 min</span>
+          <img
+            src="imagens/prato-15.jpg"
+            alt="Lasanha de Berinjela com Arroz Integral servida em marmita branca individual — Panela Fechada"
+            width="800"
+            height="600"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          >
+          <div class="hero-fallback">
+            <strong style="font-size:1.5rem;">Lasanha de Berinjela com Arroz Integral</strong>
+            <span style="margin-top:8px; opacity:0.9;">Salve a foto do prato na marmita branca em <code>imagens/prato-15.jpg</code></span>
+          </div>
+          <span class="hero-pill-bottom">1º prato por R$ 19,90</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. BENEFÍCIOS -->
+    <section id="beneficios" class="benefits-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Por que funciona na rotina</span>
+          <h2>O fim do dilema entre cozinhar tarde ou pedir lanche</h2>
+          <p>Pensado para o morador de São Paulo que quer resolver o jantar da semana com comida de verdade, sem desperdício.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <div class="benefit-icon">01</div>
+            <h3>Pronto em até 8 minutos</h3>
+            <p>Sai direto do freezer para o micro-ondas ou banho-maria. Zero louça acumulada no fim do dia e sem esperar 50 minutos por entregador.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-icon">02</div>
+            <h3>Porção individual sem sobras</h3>
+            <p>Nada de comprar ingredientes que estragam na geladeira. Você escolhe os sabores exatos que quer ter no freezer para a semana.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-icon">03</div>
+            <h3>Degustação sem compromisso</h3>
+            <p>Teste antes: porção individual de entrada por R$ 19,90 para provar sabor e tamanho antes de comprar kits maiores, sem compromisso contratual.</p>
+          </article>
+        </div>
+        <p class="benefits-note">O tempo exato de aquecimento varia entre 6 e 8 minutos conforme a potência do aparelho (110V ou 220V) e o peso do prato.</p>
+      </div>
+    </section>
+
+    <!-- 3. PROVA SOCIAL -->
+    <section id="prova-social">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Cenários reais de rotina · Prova de porção e preparo</span>
+          <h2>Feito para quem mora sozinho e não abre mão de comer bem</h2>
+          <p style="font-size:0.95rem; color:var(--text-muted); margin-top:8px;">Simulação de rotina do Planejador de Domingo em São Paulo (relatos ilustrativos do público-alvo e métricas-meta de validação).</p>
+        </div>
+
+        <div class="metrics-bar">
+          <div class="metric-item">
+            <strong>8 min</strong>
+            <span>Tempo médio de preparo</span>
+          </div>
+          <div class="metric-item">
+            <strong>16 pratos</strong>
+            <span>Cardápio variado para a semana</span>
+          </div>
+          <div class="metric-item">
+            <strong>R$ 19,90</strong>
+            <span>Degustação sem recorrência</span>
+          </div>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <p>"Eu chegava em casa às 21h e acabava pedindo hambúrguer ou pizza. Com 5 marmitas no freezer, resolvo o jantar em 7 minutos gastando menos."</p>
+            <div class="testimonial-author">
+              <strong>Rafael M., 29 anos</strong>
+              Morador de Pinheiros · São Paulo
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <p>"Tinha receio de comida congelada ser aguada ou sem gosto. Comecei pelo prato de R$ 19,90 para testar e me surpreendi com o tempero."</p>
+            <div class="testimonial-author">
+              <strong>Camila S., 33 anos</strong>
+              Moradora da Vila Mariana · São Paulo
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <p>"Peguei o kit de 5 pratos da semana no WhatsApp, agendei a entrega no sábado e não precisei pensar no que jantar de segunda a sexta."</p>
+            <div class="testimonial-author">
+              <strong>Lucas T., 36 anos</strong>
+              Morador de Perdizes · São Paulo
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. COMO FUNCIONA -->
+    <section id="como-funciona" class="steps-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Simples do pedido ao prato</span>
+          <h2>Como garantir seu jantar em 3 passos</h2>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">1</div>
+            <h3>Escolha seu prato ou kit</h3>
+            <p>Comece com 1 unidade de degustação por R$ 19,90 ou selecione os sabores favoritos entre as 16 opções do cardápio.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">2</div>
+            <h3>Reserve no WhatsApp</h3>
+            <p>Envie sua seleção via WhatsApp ou Instagram. Confirmamos entrega agendada ou no mesmo dia (pedidos até as 23h conforme disponibilidade).</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">3</div>
+            <h3>Aqueça em 8 minutos</h3>
+            <p>Guarde no freezer e leve direto ao micro-ondas na hora do jantar. Sem descongelar antes e sem sujar panelas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CARDÁPIO -->
+    <section id="cardapio">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">16 receitas equilibradas · 310g a 460g</span>
+          <h2>Escolha seus jantares individuais</h2>
+          <p>Filtre por categoria, confira gramaturas e valores nutricionais detalhados e adicione à sua seleção.</p>
+        </div>
+
+        <div class="menu-filters" role="group" aria-label="Filtrar cardápio por categoria">
+          <button type="button" class="filter-btn active" aria-pressed="true" data-filter="Todos">Todos (16)</button>
+          <button type="button" class="filter-btn" aria-pressed="false" data-filter="Aves">Aves (4)</button>
+          <button type="button" class="filter-btn" aria-pressed="false" data-filter="Carnes">Carnes (5)</button>
+          <button type="button" class="filter-btn" aria-pressed="false" data-filter="Peixes">Peixes (3)</button>
+          <button type="button" class="filter-btn" aria-pressed="false" data-filter="Plant-Based & Leves">Plant-Based &amp; Leves (4)</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <!-- Renderizado via JS com os 16 pratos -->
+        </div>
+
+        <div class="selection-bar" id="selectionBar">
+          <div>
+            <strong>Sua seleção no cardápio:</strong>
+            <span id="selectionSummary" style="color:var(--text-muted); margin-left:6px;">Nenhum prato selecionado ainda (ou clique em "Provar por R$ 19,90" para escolher no WhatsApp).</span>
+          </div>
+          <a href="#reservar" class="btn btn-primary btn-sm" onclick="syncSelectionToForm()">Provar por R$ 19,90</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. COMPARATIVO -->
+    <section id="comparativo" class="compare-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Menos custo e menos tempo perdido</span>
+          <h2>Panela Fechada vs. Cozinhar vs. Delivery</h2>
+          <p>Veja por que ter refeições prontas no freezer resolve a rotina noturna sem estourar o orçamento mensal.</p>
+        </div>
+
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Critério no jantar</th>
+                <th class="col-highlight">Panela Fechada</th>
+                <th>Cozinhar em casa</th>
+                <th>Delivery tradicional</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Tempo até comer</strong></td>
+                <td class="col-highlight">Até 8 minutos no micro-ondas</td>
+                <td>45 a 60 minutos + louça</td>
+                <td>40 a 70 minutos de espera</td>
+              </tr>
+              <tr>
+                <td><strong>Custo por refeição</strong></td>
+                <td class="col-highlight">R$ 19,90 na 1ª prova · R$ 20,94 a R$ 26,33 nos planos</td>
+                <td>Alto desperdício para 1 pessoa</td>
+                <td>R$ 45 a R$ 70 + taxa de entrega</td>
+              </tr>
+              <tr>
+                <td><strong>Equilíbrio nutricional</strong></td>
+                <td class="col-highlight">Porções balanceadas (310g a 460g)</td>
+                <td>Depende de tempo e planejamento</td>
+                <td>Geralmente calórico, sódio alto e pesado</td>
+              </tr>
+              <tr>
+                <td><strong>Previsibilidade</strong></td>
+                <td class="col-highlight">Já está no freezer, sempre disponível</td>
+                <td>Exige mercado e pré-preparo</td>
+                <td>Variação de atraso e preço</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. PLANOS E PREÇOS -->
+    <section id="planos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Comece pequeno ou abasteça a semana</span>
+          <h2>Planos e kits sem assinatura obrigatória</h2>
+          <p>Comece com a degustação única de lançamento e só avance para um kit quando aprovar.</p>
+        </div>
+
+        <div class="plans-grid">
+          <article class="plan-card">
+            <div>
+              <span class="section-eyebrow" style="margin-bottom:4px;">1ª Compra</span>
+              <h3>Experimentação</h3>
+              <div class="plan-price">R$ 19,90</div>
+              <div class="plan-unit">1 refeição · porta de entrada</div>
+              <ul class="plan-list">
+                <li>1 refeição individual à sua escolha</li>
+                <li>Porta de entrada de baixo risco</li>
+                <li>Sem vínculo ou recorrência</li>
+              </ul>
+            </div>
+            <a href="#reservar" class="btn btn-secondary btn-sm" onclick="selectPlan('Experimentação — 1 prato por R$ 19,90')">Provar por R$ 19,90</a>
+          </article>
+
+          <article class="plan-card">
+            <div>
+              <span class="section-eyebrow" style="margin-bottom:4px;">3 Refeições</span>
+              <h3>Plano Prova</h3>
+              <div class="plan-price">R$ 79,00</div>
+              <div class="plan-unit">Kit intermediário (R$ 26,33/un.)</div>
+              <ul class="plan-list">
+                <li>3 sabores variados do cardápio</li>
+                <li>Kit intermediário para a rotina</li>
+                <li>Reserva direta via WhatsApp/Instagram</li>
+              </ul>
+            </div>
+            <a href="#reservar" onclick="selectPlan('Plano Prova — 3 refeições por R$ 79,00')" style="display:inline-block; text-align:center; color:var(--brand-aubergine); font-weight:700; font-size:0.9rem; text-decoration:underline; padding:10px 0;">Selecionar kit de 3 refeições →</a>
+          </article>
+
+          <article class="plan-card featured">
+            <span class="plan-tag">Mais escolhido</span>
+            <div>
+              <span class="section-eyebrow" style="margin-bottom:4px;">5 Refeições</span>
+              <h3>Plano Semana</h3>
+              <div class="plan-price">R$ 119,00</div>
+              <div class="plan-unit">Cobertura dos jantares úteis (R$ 23,80/un.)</div>
+              <ul class="plan-list">
+                <li>Cobertura dos jantares úteis da semana</li>
+                <li>5 pratos individuais à sua escolha</li>
+                <li>Entrega agendada ou no mesmo dia</li>
+              </ul>
+            </div>
+            <a href="#reservar" onclick="selectPlan('Plano Semana — 5 refeições por R$ 119,00')" style="display:inline-block; text-align:center; color:var(--brand-green); font-weight:700; font-size:0.9rem; text-decoration:underline; padding:10px 0;">Selecionar kit de 5 refeições →</a>
+          </article>
+
+          <article class="plan-card">
+            <div>
+              <span class="section-eyebrow" style="margin-bottom:4px;">20 Refeições</span>
+              <h3>Plano Mensal</h3>
+              <div class="plan-price">R$ 418,88</div>
+              <div class="plan-unit">Dois lotes quinzenais de 10 (R$ 20,94/un.)</div>
+              <ul class="plan-list">
+                <li>Dois lotes quinzenais de 10 pratos</li>
+                <li>Não ocupa todo o freezer de uma vez</li>
+                <li>Elegível ao Clube Panela Fechada</li>
+              </ul>
+            </div>
+            <a href="#reservar" onclick="selectPlan('Plano Mensal — 20 refeições por R$ 418,88')" style="display:inline-block; text-align:center; color:var(--brand-aubergine); font-weight:700; font-size:0.9rem; text-decoration:underline; padding:10px 0;">Selecionar kit de 20 refeições →</a>
+          </article>
+        </div>
+
+        <p class="club-note">
+          <strong>Clube Panela Fechada:</strong> Após completar <strong>5 compras</strong>, você desbloqueia <strong>10% de desconto</strong> nas próximas compras, sem mensalidade nem compromisso contratual de fidelidade.
+        </p>
+      </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Tire suas dúvidas</span>
+          <h2>Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Preciso descongelar a refeição antes de colocar no micro-ondas?</summary>
+            <p>Não. Todas as refeições foram desenvolvidas para ir direto do freezer para o micro-ondas. Retire apenas a cinta/tampa conforme instrução da embalagem e aqueça por 6 a 8 minutos.</p>
+          </details>
+          <details class="faq-item">
+            <summary>A oferta de R$ 19,90 exige assinatura mensal?</summary>
+            <p>Não existe assinatura nem fidelidade obrigatória. Você reserva 1 prato individual por R$ 19,90 para conhecer e só pede novamente se gostar.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Qual o tamanho das porções? Enche mesmo na hora do jantar?</summary>
+            <p>As porções individuais variam entre 310g e 460g, equilibrando proteínas, carboidratos de boa qualidade e legumes para saciar sem pesar antes de dormir.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Onde funciona a entrega e o pagamento?</summary>
+            <p>Atendemos São Paulo (Capital) via reservas diretas no WhatsApp e Instagram, com entrega agendada ou no mesmo dia para pedidos realizados até as 23h (conforme disponibilidade de estoque e entregadores).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. GARANTIA -->
+    <section id="garantia">
+      <div class="container">
+        <div class="guarantee-box">
+          <span class="guarantee-badge">Garantia Primeira Garfada</span>
+          <h2>Experimentação de baixo risco</h2>
+          <p>
+            Se a sua primeira refeição experimental de R$ 19,90 não entregar sabor, praticidade ou expectativa na porção, devolvemos 100% do valor do prato ou enviamos outro sabor por nossa conta.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FORMULÁRIO / RESERVA -->
+    <section id="reservar" class="booking-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Reserva direta no WhatsApp</span>
+          <h2>Garanta seu jantar por R$ 19,90 agora</h2>
+          <p>Preencha os dados abaixo para abrir seu pedido já preenchido no WhatsApp.</p>
+        </div>
+
+        <div class="booking-card">
+          <form id="reservationForm" onsubmit="handleBookingSubmit(event)">
+            <div class="form-group">
+              <label for="leadName">Seu nome</label>
+              <input type="text" id="leadName" required placeholder="Ex.: Fabiano Rodrigues">
+            </div>
+
+            <div class="form-group">
+              <label for="leadWhatsapp">Seu WhatsApp com DDD</label>
+              <input type="tel" id="leadWhatsapp" required placeholder="(11) 99999-9999">
+            </div>
+
+            <div class="form-group">
+              <label for="leadPlan">Opção desejada</label>
+              <select id="leadPlan">
+                <option value="Experimentação — 1 prato por R$ 19,90">Experimentação — 1 prato por R$ 19,90</option>
+                <option value="Plano Prova — 3 refeições por R$ 79,00">Plano Prova — 3 refeições por R$ 79,00</option>
+                <option value="Plano Semana — 5 refeições por R$ 119,00">Plano Semana — 5 refeições por R$ 119,00</option>
+                <option value="Plano Mensal — 20 refeições por R$ 418,88">Plano Mensal — 20 refeições por R$ 418,88</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="leadDishes">Pratos selecionados no cardápio (opcional)</label>
+              <textarea id="leadDishes" rows="3" placeholder="Selecione os pratos acima no cardápio ou escreva aqui os sabores que deseja..."></textarea>
+            </div>
+
+            <label class="checkbox-row">
+              <input type="checkbox" required checked>
+              <span>Concordo em receber contato da Panela Fechada via WhatsApp para confirmar disponibilidade de entrega e pagamento.</span>
+            </label>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">Provar por R$ 19,90</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. CTA FINAL -->
+    <section class="final-cta">
+      <div class="container">
+        <h2>Hoje à noite, deixe a panela fechada</h2>
+        <p>Tenha um jantar caseiro, nutritivo e pronto em 8 minutos esperando por você no freezer.</p>
+        <a href="#reservar" class="btn btn-primary">Provar por R$ 19,90</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img
+            src="imagens/logo.png"
+            alt="Panela Fechada — Refeições Congeladas"
+            class="footer-logo-img"
+          >
+          <p style="margin-top:8px;">Refeições individuais congeladas para o jantar de quem mora sozinho em São Paulo (Capital). Não oferecemos almoço diário, dietas rigorosamente individualizadas nem compromisso contratual de fidelidade.</p>
+        </div>
+        <div>
+          <strong style="color:#FFFFFF;">Navegação</strong>
+          <ul class="footer-links" style="margin-top:8px;">
+            <li><a href="#cardapio">Cardápio completo (16 pratos)</a></li>
+            <li><a href="#planos">Planos e kits</a></li>
+            <li><a href="#faq">Perguntas frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong style="color:#FFFFFF;">Atendimento</strong>
+          <p style="margin-top:8px;">WhatsApp e Instagram<br>Segunda a Domingo, 9h às 21h</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Panela Fechada. Todos os direitos reservados.</span>
+        <span>Oferta de experimentação válida para 1 unidade por CPF no primeiro pedido.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const dishes = [
+      {
+        id: 1,
+        name: "Salmão Grelhado com Quinoa e Brócolis",
+        category: "Peixes",
+        weight: "365g",
+        kcal: 495,
+        protein: "34g",
+        carbs: "31g",
+        fat: "25g",
+        fiber: "6,5g",
+        ingredients: "140g de salmão grelhado com ervas + 120g de quinoa tricolor cozida + 100g de brócolis no vapor + 5ml de azeite extra virgem."
+      },
+      {
+        id: 2,
+        name: "Filé de Frango Grelhado com Purê de Batata-Doce e Couve",
+        category: "Aves",
+        weight: "365g",
+        kcal: 435,
+        protein: "44g",
+        carbs: "36g",
+        fat: "11g",
+        fiber: "6,0g",
+        ingredients: "150g de filé de peito de frango grelhado + 130g de purê de batata-doce + 80g de couve refogada no alho + 5ml de azeite."
+      },
+      {
+        id: 3,
+        name: "Poke Energético de Atum Grelhado com Arroz Integral",
+        category: "Peixes",
+        weight: "385g",
+        kcal: 480,
+        protein: "38g",
+        carbs: "44g",
+        fat: "15g",
+        fiber: "8,2g",
+        ingredients: "140g de atum selado em cubos + 120g de arroz integral + 60g de edamame + 60g de cenoura e pepino + gergelim."
+      },
+      {
+        id: 4,
+        name: "Bowl Mediterrâneo de Grão-de-Bico e Abóbora Assada",
+        category: "Plant-Based & Leves",
+        weight: "390g",
+        kcal: 440,
+        protein: "19g",
+        carbs: "52g",
+        fat: "16g",
+        fiber: "11,5g",
+        ingredients: "140g de grão-de-bico temperado + 130g de abóbora cabotiá assada + 80g de espinafre refogado + 30g de homus + sementes."
+      },
+      {
+        id: 5,
+        name: "Patinho Moído Refogado com Abobrinha e Arroz 7 Grãos",
+        category: "Carnes",
+        weight: "385g",
+        kcal: 465,
+        protein: "38g",
+        carbs: "41g",
+        fat: "14g",
+        fiber: "6,8g",
+        ingredients: "130g de patinho moído refogado + 100g de arroz 7 grãos cozido + 100g de abobrinha em cubos + 50g de cenoura + 5ml de azeite."
+      },
+      {
+        id: 6,
+        name: "Tilápia Assada com Batata-Baroa e Aspargos",
+        category: "Peixes",
+        weight: "365g",
+        kcal: 410,
+        protein: "36g",
+        carbs: "38g",
+        fat: "11g",
+        fiber: "5,2g",
+        ingredients: "150g de filé de tilápia assado com limão + 120g de mandioquinha assada em rodelas + 90g de aspargos grelhados + 5ml de azeite."
+      },
+      {
+        id: 7,
+        name: "Omelete Recheada de Espinafre com Torrada Integral e Abacate",
+        category: "Plant-Based & Leves",
+        weight: "310g",
+        kcal: 450,
+        protein: "27g",
+        carbs: "26g",
+        fat: "26g",
+        fiber: "6,4g",
+        ingredients: "3 ovos inteiros + 60g de espinafre refogado + 30g de queijo minas padrão + 1 fatia (50g) de pão 100% integral + 30g de pasta de abacate."
+      },
+      {
+        id: 8,
+        name: "Frango Desfiado Cremoso com Feijão Carioca e Salada Colorida",
+        category: "Aves",
+        weight: "415g",
+        kcal: 475,
+        protein: "43g",
+        carbs: "46g",
+        fat: "11g",
+        fiber: "8,5g",
+        ingredients: "130g de peito de frango desfiado cremoso + 90g de feijão carioca cozido + 80g de arroz integral + 115g de mix de legumes e folhas."
+      },
+      {
+        id: 9,
+        name: "Escondidinho Fit de Carne Seca Dessalgada com Mandioca",
+        category: "Carnes",
+        weight: "325g",
+        kcal: 470,
+        protein: "35g",
+        carbs: "45g",
+        fat: "15g",
+        fiber: "5,8g",
+        ingredients: "120g de carne seca magra desfiada + 140g de purê de mandioca + 60g de vagem refogada + 5ml de azeite."
+      },
+      {
+        id: 10,
+        name: "Tofu Grelhado com Gergelim, Lentilha e Legumes Salteados",
+        category: "Plant-Based & Leves",
+        weight: "390g",
+        kcal: 425,
+        protein: "26g",
+        carbs: "44g",
+        fat: "15g",
+        fiber: "10,2g",
+        ingredients: "150g de tofu firme grelhado com gergelim + 110g de lentilha cozida + 120g de pimentão, brócolis e cebola roxa + 10ml de azeite."
+      },
+      {
+        id: 11,
+        name: "Macarrão Integral ao Sugo com Almôndegas de Frango",
+        category: "Aves",
+        weight: "375g",
+        kcal: 490,
+        protein: "40g",
+        carbs: "51g",
+        fat: "13g",
+        fiber: "7,1g",
+        ingredients: "130g de espaguete integral + 140g de almôndegas de frango assadas + 100g de molho de tomate caseiro + 5g de parmesão."
+      },
+      {
+        id: 12,
+        name: "Salada Completa de Frango, Manga, Quinoa e Castanhas",
+        category: "Aves",
+        weight: "355g",
+        kcal: 445,
+        protein: "36g",
+        carbs: "35g",
+        fat: "17g",
+        fiber: "7,4g",
+        ingredients: "130g de frango grelhado em tiras + 90g de quinoa cozida + 50g de manga em cubos + 70g de mix de folhas + 15g de castanha-do-pará."
+      },
+      {
+        id: 13,
+        name: "Filé Mignon Suíno Assado com Purê de Abóbora e Couve-Flor",
+        category: "Carnes",
+        weight: "375g",
+        kcal: 430,
+        protein: "41g",
+        carbs: "34g",
+        fat: "13g",
+        fiber: "6,1g",
+        ingredients: "150g de filé mignon suíno assado + 130g de purê de abóbora cabotiá + 90g de couve-flor assada + 5ml de azeite."
+      },
+      {
+        id: 14,
+        name: "Wrap Integral de Atum, Cottage e Vegetais Crocantes",
+        category: "Carnes",
+        weight: "320g",
+        kcal: 420,
+        protein: "34g",
+        carbs: "39g",
+        fat: "13g",
+        fiber: "6,8g",
+        ingredients: "1 pão folha integral (60g) + 120g de atum sólido + 50g de queijo cottage + 90g de cenoura ralada, tomate e folhas."
+      },
+      {
+        id: 15,
+        name: "Lasanha de Berinjela com Arroz Integral",
+        category: "Plant-Based & Leves",
+        weight: "430g",
+        kcal: 460,
+        protein: "22g",
+        carbs: "52g",
+        fat: "17g",
+        fiber: "9,4g",
+        ingredients: "220g de lasanha artesanal de berinjela grelhada com molho de tomate rústico e ricota temperada + 110g de arroz integral + 100g de legumes salteados."
+      },
+      {
+        id: 16,
+        name: "Lasanha à Bolonhesa Equilibrada com Arroz Branco e Batatas Assadas",
+        category: "Carnes",
+        weight: "460g",
+        kcal: 540,
+        protein: "33g",
+        carbs: "61g",
+        fat: "17g",
+        fiber: "5,5g",
+        ingredients: "240g de lasanha à bolonhesa com patinho moído magro e molho caseiro + 120g de arroz branco soltinho + 100g de batatas rústicas assadas."
+      }
+    ];
+
+    const selectedQuantities = {};
+    let currentFilter = "Todos";
+
+    function renderMenu() {
+      const grid = document.getElementById("menuGrid");
+      const filtered = currentFilter === "Todos"
+        ? dishes
+        : dishes.filter(d => d.category === currentFilter);
+
+      grid.innerHTML = filtered.map(dish => `
+        <article class="dish-card" data-category="${dish.category}">
+          <div>
+            <div class="dish-photo-wrap">
+              <span class="dish-badge-cat">${dish.category}</span>
+              <img
+                src="imagens/prato-${dish.id}.jpg"
+                alt="${dish.name} servido em marmita branca individual"
+                width="520"
+                height="390"
+                loading="lazy"
+                decoding="async"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              >
+              <div class="dish-placeholder">
+                <strong>${dish.name}</strong>
+                <span style="margin-top:6px;">Imagem: <code>imagens/prato-${dish.id}.jpg</code></span>
+              </div>
+              <span class="dish-badge-kcal">${dish.kcal} kcal</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-meta">Prato #${String(dish.id).padStart(2, "0")} · Porção ${dish.weight}</div>
+              <h3>${dish.name}</h3>
+              <p class="dish-desc">${dish.ingredients}</p>
+              <details class="dish-nutrition">
+                <summary>Tabela nutricional completa ▾</summary>
+                <div class="nutrition-pills">
+                  <span>Proteínas: ${dish.protein}</span>
+                  <span>Carboidratos: ${dish.carbs}</span>
+                  <span>Gorduras: ${dish.fat}</span>
+                  <span>Fibras: ${dish.fiber}</span>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="dish-footer">
+            <div class="qty-control" role="group" aria-label="Quantidade de ${dish.name}">
+              <button type="button" aria-label="Diminuir quantidade de ${dish.name}" onclick="updateQty(${dish.id}, -1)">−</button>
+              <span id="qty-${dish.id}" aria-live="polite">${selectedQuantities[dish.id] || 0}</span>
+              <button type="button" aria-label="Aumentar quantidade de ${dish.name}" onclick="updateQty(${dish.id}, 1)">+</button>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" aria-label="Adicionar ${dish.name} à seleção" onclick="updateQty(${dish.id}, 1)">Adicionar</button>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function updateQty(id, delta) {
+      const next = Math.max(0, (selectedQuantities[id] || 0) + delta);
+      if (next === 0) {
+        delete selectedQuantities[id];
+      } else {
+        selectedQuantities[id] = next;
+      }
+      const badge = document.getElementById(`qty-${id}`);
+      if (badge) badge.textContent = next;
+      updateSelectionSummary();
+    }
+
+    function updateSelectionSummary() {
+      const summaryEl = document.getElementById("selectionSummary");
+      const entries = Object.entries(selectedQuantities);
+      if (entries.length === 0) {
+        summaryEl.textContent = 'Nenhum prato selecionado ainda (ou clique em "Provar por R$ 19,90" para escolher no WhatsApp).';
+        return;
+      }
+      const totalItems = entries.reduce((acc, [, q]) => acc + q, 0);
+      const labels = entries.map(([id, q]) => {
+        const d = dishes.find(item => item.id === Number(id));
+        return `${q}x ${d.name}`;
+      });
+      summaryEl.textContent = `${totalItems} ${totalItems === 1 ? "prato" : "pratos"}: ${labels.join(" · ")}`;
+    }
+
+    function syncSelectionToForm() {
+      const entries = Object.entries(selectedQuantities);
+      if (entries.length > 0) {
+        const lines = entries.map(([id, q]) => {
+          const d = dishes.find(item => item.id === Number(id));
+          return `- ${q}x #${String(d.id).padStart(2, "0")} ${d.name}`;
+        });
+        document.getElementById("leadDishes").value = lines.join("\n");
+      }
+    }
+
+    function selectPlan(planName) {
+      const select = document.getElementById("leadPlan");
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value === planName) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+      syncSelectionToForm();
+    }
+
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+      syncSelectionToForm();
+      const name = document.getElementById("leadName").value.trim();
+      const phone = document.getElementById("leadWhatsapp").value.trim();
+      const plan = document.getElementById("leadPlan").value;
+      const chosen = document.getElementById("leadDishes").value.trim();
+
+      let msg = `Olá, Panela Fechada! Quero fazer minha reserva.\n\n`;
+      msg += `*Nome:* ${name}\n`;
+      msg += `*WhatsApp:* ${phone}\n`;
+      msg += `*Opção:* ${plan}\n`;
+      if (chosen) {
+        msg += `*Pratos escolhidos:*\n${chosen}\n`;
+      }
+      msg += `\nPode me confirmar a entrega em São Paulo?`;
+
+      const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(msg)}`;
+      window.open(whatsappUrl, "_blank", "noopener");
+    }
+
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach(b => {
+          b.classList.remove("active");
+          b.setAttribute("aria-pressed", "false");
+        });
+        btn.classList.add("active");
+        btn.setAttribute("aria-pressed", "true");
+        currentFilter = btn.dataset.filter;
+        renderMenu();
+      });
+    });
+
+    renderMenu();
+  </script>
+</body>
+</html>
